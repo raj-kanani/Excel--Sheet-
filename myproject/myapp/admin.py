@@ -11,4 +11,3 @@ class StudentAdmin(ImportExportModelAdmin):
 @admin.register(Teacher)
 class StudentAdmin(ImportExportModelAdmin):
     list_display = ['id', 'name', 'subject', 'age']
-

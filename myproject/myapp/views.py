@@ -23,9 +23,6 @@ def export_excel(request):
             'address': s.address
         })
     pd.DataFrame(data).to_excel('myexcel.xlsx', index=False)
-    excel = pd.read_excel('myexcel.xlsx', index_col=1, sheet_name=0)
+    excel = pd.read_excel('myexcel.xlsx', index_col=0)
     print(excel)
     return JsonResponse({'status': 200})
-
-
-
